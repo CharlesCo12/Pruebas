@@ -19,7 +19,7 @@ n = 10000
 r = np.linspace(2.8, 4.0, n)
 iterations = 1000
 last = 100
-x = np.abs(np.min(modulo(np.loadtxt("datos_bif.dat"))))*np.ones(10000)
+x = (3.14123)*np.ones(10000)
 for i in range(iterations):
     x = logistic(r, x)
     # We display the bifurcation diagram.
@@ -27,4 +27,4 @@ for i in range(iterations):
         plt.plot(r, x, ',k', alpha=.06)
 plt.xlim(2.8, 4)
 plt.title("Bifurcation diagram")
-plt.savefig('bif.png')
+plt.savefig('biferror.png')
