@@ -19,7 +19,7 @@ n = 10000
 r = np.linspace(2.8, 4.0, n)
 iterations = 1000
 last = 100
-x = (3.14123)*np.ones(10000)
+x = np.abs(np.min(modulo(np.loadtxt("datos_bif.dat"))))*np.ones(10000)
 for i in range(iterations):
     x = logistic(r, x)
     if i >= (iterations - last):
