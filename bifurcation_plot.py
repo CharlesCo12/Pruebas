@@ -22,7 +22,6 @@ last = 100
 x = (3.14123)*np.ones(10000)
 for i in range(iterations):
     x = logistic(r, x)
-    # We display the bifurcation diagram.
     if i >= (iterations - last):
         plt.plot(r, x, ',k', alpha=.06)
 plt.xlim(2.8, 4)
